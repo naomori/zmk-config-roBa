@@ -68,7 +68,7 @@
         default_layer {
             bindings = <
 &kp Q                 &kp W      &kp E      &kp R          &mt LEFT_WIN T                                                   &mt RIGHT_WIN Y  &kp U        &lt 5 I    &kp O    &kp P
-&kp A                 &kp S      &kp D      &kp F          &kp G                 &kp LEFT_SHIFT      &kp RC(G)              &kp H            &kp J        &kp K      &kp L    &kp RC(RA(ENTER))
+&kp A                 &kp S      &kp D      &kp F          &kp G                 &kp LEFT_SHIFT      &kp RC(G)              &kp H            &kp J        &kp K      &kp L    &kp ENTER
 &kp Z                 &kp X      &kp C      &mt LCTRL V    &kp B                 &tog 2              &tog 1                 &kp N            &mt RCTRL M  &kp COMMA  &kp DOT  &kp SLASH
 &lt_to_layer_0 3 ESC  &mkp RCLK  &mkp LCLK  &kp LC(SPACE)  &mt LEFT_SHIFT SPACE  &kp TAB             &mt RIGHT_SHIFT MINUS  &kp BACKSPACE                                     &lt_to_layer_0 3 ESC
             >;
@@ -78,7 +78,7 @@
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                       &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)   &kp RS(NUMBER_0)
 &kp COLON         &kp TILDE         &kp PLUS          &kp UNDERSCORE    &kp PIPE           &trans      &none   &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
-&trans            &kp LEFT_SHIFT    &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &trans      &trans  &kp SINGLE_QUOTE  &kp RC(G)         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RCTRL
+&trans            &kp LEFT_SHIFT    &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &trans      &tog 0  &kp SINGLE_QUOTE  &kp RC(G)         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RCTRL
 &trans            &trans            &trans            &trans            &kp LEFT_SHIFT     &trans      &trans  &kp RIGHT_SHIFT                                                          &none
             >;
         };
@@ -87,7 +87,7 @@
             bindings = <
 &kp ESC  &kp LC(LS(TAB))  &kp LC(TAB)  &none                     &none                              &kp PERIOD    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
 &none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none       &none   &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RC(G)
-&none    &none            &none        &none                     &kp LG(LS(V))  &none       &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&none    &none            &none        &none                     &kp LG(LS(V))  &tog 0      &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
 &trans   &trans           &trans       &kp LG(LC(LS(NUMBER_4)))  &kp LA(LS(F))  &trans      &trans  &trans                                                  &kp RIGHT_WIN
             >;
         };
@@ -95,7 +95,7 @@
         ARROW {
             bindings = <
 &none   &kp F7  &kp F8  &kp F9  &kp F10                      &kp RA(RC(Y))   &kp RC(RA(U))   &kp RC(RA(I))  &kp RC(RA(O))    &trans
-&none   &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &trans
+&none   &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp RC(RA(ENTER))
 &none   &kp F1  &kp F2  &kp F3  &trans   &trans      &trans  &kp RA(RC(N))   &kp RA(RC(Q))   &kp RA(RC(E))  &trans           &trans
 &trans  &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                          &trans
             >;
