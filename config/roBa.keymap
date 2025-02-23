@@ -78,17 +78,17 @@
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                       &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)   &kp RS(NUMBER_0)
 &kp COLON         &kp TILDE         &kp PLUS          &kp UNDERSCORE    &kp PIPE           &trans      &none   &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
-&trans            &kp LEFT_SHIFT    &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &trans      &tog 1  &kp SINGLE_QUOTE  &kp RC(G)         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RCTRL
+&trans            &kp LEFT_SHIFT    &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &tog 2      &tog 1  &kp SINGLE_QUOTE  &kp RC(G)         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RCTRL
 &trans            &trans            &trans            &trans            &kp SPACE          &trans      &trans  &kp BACKSPACE                                                            &none
             >;
         };
 
         NUM {
             bindings = <
-&kp ESC  &kp LC(LS(TAB))  &kp LC(TAB)  &none                     &none                              &kp PERIOD    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none       &none   &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RC(G)
-&none    &none            &none        &none                     &kp LG(LS(V))  &tog 2      &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
-&trans   &trans           &trans       &kp LG(LC(LS(NUMBER_4)))  &kp LA(LS(F))  &trans      &trans  &trans                                                  &kp RIGHT_WIN
+&kp ESC  &kp LC(LS(TAB))  &kp LC(TAB)  &none                     &none                                     &kp PERIOD     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none              &none   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RC(G)
+&none    &none            &none        &none                     &kp LG(LS(V))  &tog 2             &tog 1  &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&trans   &trans           &trans       &kp LG(LC(LS(NUMBER_4)))  &kp SPACE      &kp LS(LA(F))      &trans  &kp BACKSPACE                                            &kp RIGHT_WIN
             >;
         };
 
