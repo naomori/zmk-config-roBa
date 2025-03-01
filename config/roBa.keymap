@@ -33,7 +33,7 @@
 
         lang_toggle {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <24 25>;
+            key-positions = <24 23>;
         };
 
         esc {
@@ -110,7 +110,7 @@
             bindings = <
 &none   &kp F7  &kp F8  &kp F9  &kp F10                                  &kp RA(RC(Y))   &kp RC(RA(U))   &kp RC(RA(I))  &kp RC(RA(O))    &trans
 &none   &kp F4  &kp F5  &kp F6  &kp F11              &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp RC(RA(ENTER))
-&none   &kp F1  &kp F2  &kp F3  &trans               &trans      &trans  &kp RA(RC(N))   &kp RA(RC(Q))   &kp RA(RC(E))  &trans           &trans
+&none   &kp F1  &kp F2  &kp F3  &kp F12              &trans      &trans  &kp RA(RC(N))   &kp RA(RC(Q))   &kp RA(RC(E))  &trans           &trans
 &trans  &trans  &trans  &trans  &mt LA(LCTRL) SPACE  &trans      &trans  &trans                                                          &trans
             >;
         };
