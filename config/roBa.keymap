@@ -26,11 +26,6 @@
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
@@ -40,6 +35,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
@@ -48,6 +48,20 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        to_copymode: to_copymode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(G) &kp LEFT_BRACKET>;
+            label = "TO_COPYMODE";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(G) &kp RIGHT_BRACKET>;
+            label = "PASTE";
         };
     };
 
@@ -67,10 +81,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W      &kp E      &kp R               &mt LEFT_WIN T                                                                &mt RIGHT_WIN Y  &kp U                &lt 5 I    &kp O    &kp P
-&kp A                 &kp S      &kp D      &kp F               &kp G                 &lt_to_layer_0 2 GRAVE      &lt_to_layer_0 2 RC(G)      &kp H            &kp J                &kp K      &kp L    &kp ENTER
-&kp Z                 &kp X      &kp C      &mt LEFT_CONTROL V  &kp B                 &lt_to_layer_0 1 COLON      &lt_to_layer_0 1 SEMICOLON  &kp N            &mt RIGHT_CONTROL M  &kp COMMA  &kp DOT  &kp SLASH
-&lt_to_layer_0 3 ESC  &mkp RCLK  &mkp LCLK  &kp LC(SPACE)       &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 SPACE      &mt RIGHT_SHIFT MINUS       &kp BACKSPACE                                             &lt_to_layer_0 3 TAB
+&kp Q                 &kp W      &kp E      &kp R               &mt LEFT_WIN T                                                                &mt RIGHT_WIN Y     &kp U                &lt 5 I    &kp O    &kp P
+&kp A                 &kp S      &kp D      &kp F               &kp G                 &kp GRAVE                   &kp DOUBLE_QUOTES           &kp H               &kp J                &kp K      &kp L    &kp ENTER
+&kp Z                 &kp X      &kp C      &mt LEFT_CONTROL V  &lt_to_layer_0 1 B    &lt_to_layer_0 2 COLON      &lt_to_layer_0 2 SEMICOLON  &lt_to_layer_0 1 N  &mt RIGHT_CONTROL M  &kp COMMA  &kp DOT  &kp SLASH
+&lt_to_layer_0 3 ESC  &mkp RCLK  &mkp LCLK  &kp LC(SPACE)       &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 SPACE      &mt RIGHT_SHIFT MINUS       &kp BACKSPACE                                                &lt_to_layer_0 3 TAB
             >;
         };
 
@@ -86,8 +100,8 @@
         NUM {
             bindings = <
 &kp ESC  &kp LC(LS(TAB))  &kp LC(TAB)  &none                     &none                                     &kp PERIOD     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none              &none   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&none    &none            &none        &none                     &kp LG(LS(V))  &none              &none   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none              &none   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &to_copymode
+&none    &none            &none        &none                     &kp LG(LS(V))  &none              &none   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &paste
 &trans   &trans           &trans       &kp LG(LC(LS(NUMBER_4)))  &kp SPACE      &kp LS(LA(F))      &trans  &kp BACKSPACE                                            &kp RIGHT_WIN
             >;
         };
