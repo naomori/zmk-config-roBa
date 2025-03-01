@@ -31,8 +31,8 @@
             key-positions = <20 21>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
+        lang_toggle {
+            bindings = <&kp LC(SPACE)>;
             key-positions = <24 25>;
         };
 
