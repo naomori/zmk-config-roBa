@@ -64,6 +64,34 @@
             bindings = <&kp RC(G) &kp RIGHT_BRACKET>;
             label = "PASTE";
         };
+
+        create_term: create_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp C>;
+            label = "CREATE_TERM";
+        };
+
+        kill_pane: kill_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp X>;
+            label = "KILL_PANE";
+        };
+
+        next_term: next_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp N>;
+            label = "NEXT_TERM";
+        };
+
+        prev_term: prev_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp P>;
+            label = "PREV_TERM";
+        };
     };
 
     behaviors {
@@ -93,17 +121,17 @@
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                          &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)   &kp RS(NUMBER_0)
 &kp COLON         &kp TILDE         &kp PLUS          &kp UNDERSCORE    &kp PIPE           &trans      &none      &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
-&trans            &kp LEFT_SHIFT    &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &none       &kp RC(G)  &kp SINGLE_QUOTE  &none             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RCTRL
+&kp LEFT_SHIFT    &none             &kp LEFT_WIN      &trans            &kp DOUBLE_QUOTES  &none       &kp RC(G)  &kp SINGLE_QUOTE  &none             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT
 &trans            &trans            &trans            &trans            &kp SPACE          &trans      &trans     &kp BACKSPACE                                                            &none
             >;
         };
 
         NUM {
             bindings = <
-&kp ESC  &kp LC(LS(TAB))  &kp LC(TAB)  &none                     &none                                     &kp PERIOD     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&none    &kp LG(V)        &kp LG(C)    &kp LG(SPACE)             &none          &none              &none   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &to_copymode
-&none    &none            &none        &none                     &kp LG(LS(V))  &none              &none   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &paste
-&trans   &trans           &trans       &kp LG(LC(LS(NUMBER_4)))  &kp SPACE      &kp LS(LA(F))      &trans  &kp BACKSPACE                                            &kp RIGHT_WIN
+&kp ESC     &kp LC(LS(TAB))  &kp LC(TAB)   &none                     &none                                     &kp PERIOD     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&none       &kp LG(V)        &kp LG(C)     &kp LG(SPACE)             &none          &none              &none   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &to_copymode
+&prev_term  &kill_pane       &create_term  &next_term                &kp LG(LS(V))  &none              &none   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &paste
+&trans      &trans           &trans        &kp LG(LC(LS(NUMBER_4)))  &kp SPACE      &kp LS(LA(F))      &trans  &kp BACKSPACE                                            &kp RIGHT_WIN
             >;
         };
 
