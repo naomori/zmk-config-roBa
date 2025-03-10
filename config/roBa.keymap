@@ -44,12 +44,12 @@
 
         LCLICK {
             bindings = <&mkp LCLK>;
-            key-positions = <19 20>;
+            key-positions = <7 8>;
         };
 
         RCLICK {
             bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
         };
     };
 
