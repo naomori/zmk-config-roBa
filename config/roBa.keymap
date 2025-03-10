@@ -27,11 +27,6 @@
             key-positions = <12 13>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
         lang_toggle {
             bindings = <&kp LC(SPACE)>;
             key-positions = <24 23>;
@@ -49,7 +44,12 @@
 
         RCLICK {
             bindings = <&mkp RCLK>;
-            key-positions = <19 20>;
+            key-positions = <31 32>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <20 19>;
         };
     };
 
