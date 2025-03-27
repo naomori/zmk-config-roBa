@@ -22,11 +22,6 @@
             key-positions = <11 12>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
         lang_toggle {
             bindings = <&kp LC(SPACE)>;
             key-positions = <24 23>;
@@ -35,21 +30,6 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-        };
-
-        LCLICK {
-            bindings = <&mkp LCLK>;
-            key-positions = <7 8>;
-        };
-
-        RCLICK {
-            bindings = <&mkp RCLK>;
-            key-positions = <31 32>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 19>;
         };
     };
 
@@ -121,7 +101,7 @@
         default_layer {
             bindings = <
 &kp Q                 &kp W      &kp E      &kp R               &mt LEFT_WIN T                                                                &mt RIGHT_WIN Y  &kp U                &kp I      &kp O    &kp P
-&kp A                 &kp S      &kp D      &kp F               &kp G                 &lt_to_layer_0 6 GRAVE      &kp DOUBLE_QUOTES           &kp H            &kp J                &kp K      &kp L    &kp ENTER
+&kp A                 &kp S      &kp D      &kp F               &kp G                 &lt_to_layer_0 6 GRAVE      &kp EQUAL                   &kp H            &kp J                &kp K      &kp L    &kp ENTER
 &lt_to_layer_0 1 Z    &kp X      &kp C      &mt LEFT_CONTROL V  &kp B                 &lt_to_layer_0 2 COLON      &lt_to_layer_0 2 SEMICOLON  &kp N            &mt RIGHT_CONTROL M  &kp COMMA  &kp DOT  &lt_to_layer_0 1 SLASH
 &lt_to_layer_0 3 ESC  &mkp RCLK  &mkp LCLK  &kp LC(SPACE)       &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 SPACE      &mt RIGHT_SHIFT MINUS       &kp BACKSPACE                                             &lt_to_layer_0 3 TAB
             >;
