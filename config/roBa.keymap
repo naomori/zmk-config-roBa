@@ -49,6 +49,48 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        to_copymode: to_copymode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp LEFT_BRACKET>;
+            label = "TO_COPYMODE";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp RIGHT_BRACKET>;
+            label = "PASTE";
+        };
+
+        create_term: create_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp C>;
+            label = "CREATE_TERM";
+        };
+
+        kill_pane: kill_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp X>;
+            label = "KILL_PANE";
+        };
+
+        next_term: next_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp N>;
+            label = "NEXT_TERM";
+        };
+
+        prev_term: prev_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(G) &kp P>;
+            label = "PREV_TERM";
+        };
     };
 
     behaviors {
@@ -87,10 +129,10 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp ESC     &kp LS(LC(TAB))  &kp LC(TAB)   &trans              &trans                                              &kp PERIOD     &kp N7  &kp N8  &kp N9  &kp N0
+&trans      &kp LG(V)        &kp LG(C)     &kp LG(SPACE)       &trans         &kp LC(LA(KP_NUMBER_0))      &trans  &kp MINUS      &kp N4  &kp N5  &kp N6  &to_copymode
+&prev_term  &kill_pane       &create_term  &next_term          &kp LG(LS(V))  &trans                       &trans  &kp N0         &kp N1  &kp N2  &kp N3  &paste
+&trans      &trans           &trans        &kp LG(LC(LS(N4)))  &kp SPACE      &kp LS(LA(F))                &trans  &kp BACKSPACE                          &kp RIGHT_COMMAND
             >;
         };
 
