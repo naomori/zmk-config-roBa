@@ -99,10 +99,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W               &kp E      &kp R          &mt LEFT_COMMAND T                                                            &mt RIGHT_COMMAND Y  &kp U        &kp I      &kp O                 &kp P
-&kp A                 &kp S               &kp D      &kp F          &kp G                 &lt_to_layer_0 6 GRAVE      &kp EQUAL                   &kp H                &kp J        &kp K      &kp L                 &kp RETURN
-&kp Z                 &lt_to_layer_0 1 X  &kp C      &mt LCTRL V    &kp B                 &lt_to_layer_0 2 COLON      &lt_to_layer_0 2 SEMICOLON  &kp N                &mt RCTRL M  &kp COMMA  &lt_to_layer_0 1 DOT  &kp SLASH
-&lt_to_layer_0 3 ESC  &mkp RCLK           &mkp LCLK  &kp LC(SPACE)  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 SPACE      &mt RIGHT_SHIFT MINUS       &kp BACKSPACE                                                      &lt_to_layer_0 3 TAB
+&kp Q                 &kp W                   &kp E      &kp R          &mt LEFT_COMMAND T                                                            &mt RIGHT_COMMAND Y  &kp U        &kp I      &kp O                 &kp P
+&kp A                 &kp S                   &kp D      &kp F          &kp G                 &lt_to_layer_0 6 GRAVE      &kp EQUAL                   &kp H                &kp J        &kp K      &kp L                 &kp RETURN
+&kp Z                 &kp X                   &kp C      &mt LCTRL V    &kp B                 &lt_to_layer_0 2 COLON      &lt_to_layer_0 2 SEMICOLON  &kp N                &mt RCTRL M  &kp COMMA  &lt_to_layer_0 1 DOT  &kp SLASH
+&lt_to_layer_0 3 ESC  &lt_to_layer_0 1 GRAVE  &mkp LCLK  &kp LC(SPACE)  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 SPACE      &mt RIGHT_SHIFT MINUS       &kp BACKSPACE                                                      &lt_to_layer_0 3 TAB
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -113,7 +113,7 @@
 &kp LS(N1)      &kp LS(N2)      &kp LS(N3)        &kp LS(N4)      &kp LS(N5)                                &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(N8)        &kp RS(N9)         &kp RS(N0)
 &kp COLON       &kp TILDE       &kp PLUS          &kp UNDERSCORE  &kp PIPE           &trans      &trans     &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
 &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LEFT_COMMAND  &trans          &kp DOUBLE_QUOTES  &trans      &kp RC(G)  &kp SINGLE_QUOTE  &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT
-&trans          &trans          &trans            &trans          &kp SPACE          &trans      &trans     &kp BACKSPACE                                                            &trans
+&trans          &mkp RCLK       &mkp LCLK         &trans          &kp SPACE          &trans      &trans     &kp BACKSPACE                                                            &trans
             >;
         };
 
