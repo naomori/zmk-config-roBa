@@ -50,6 +50,11 @@
             bindings = <&lt_to_layer_0 5 LEFT_SHIFT>;
             key-positions = <24 25>;
         };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
