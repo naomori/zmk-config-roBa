@@ -35,6 +35,21 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
         };
+
+        left_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <12 13>;
+        };
+
+        rght_shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <18 19>;
+        };
+
+        layer_to_5 {
+            bindings = <&lt_to_layer_0 5 LEFT_SHIFT>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
