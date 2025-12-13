@@ -131,7 +131,7 @@
         FUNCTION {
             bindings = <
 &kp LS(N1)      &kp LS(N2)      &kp LS(N3)        &kp LS(N4)      &kp LS(N5)                                             &kp RS(NUMBER_6)  &kp RS(NUMBER_7)  &kp RS(N8)        &kp RS(N9)         &kp RS(N0)
-&kp COLON       &kp TILDE       &kp PLUS          &kp UNDERSCORE  &kp PIPE           &kp GLOBE            &kp GLOBE      &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
+&kp COLON       &kp TILDE       &kp PLUS          &kp UNDERSCORE  &kp PIPE           &trans               &trans         &kp BACKSLASH     &kp MINUS         &kp EQUAL         &kp GRAVE          &kp SEMICOLON
 &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LEFT_COMMAND  &trans          &kp DOUBLE_QUOTES  &kp EXCLAMATION      &kp MINUS      &kp SINGLE_QUOTE  &kp RIGHT_SHIFT   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_SHIFT
 &trans          &mkp RCLK       &mkp LCLK         &trans          &kp SPACE          &kp SPACE            &kp BACKSPACE  &kp BACKSPACE                                                            &trans
             >;
