@@ -19,7 +19,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -35,34 +34,9 @@
             key-positions = <11 12>;
         };
 
-        lang_toggle {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <23 24>;
-        };
-
         esc {
             bindings = <&kp ESC>;
-            key-positions = <1 2>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
-        };
-
-        left_shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <12 13>;
-        };
-
-        rght_shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <18 19>;
-        };
-
-        layer_to_5 {
-            bindings = <&lt_to_layer_0 5 LEFT_SHIFT>;
-            key-positions = <24 25>;
+            key-positions = <23 24>;
         };
     };
 
@@ -115,6 +89,13 @@
             bindings = <&kp LC(G) &kp P>;
             label = "PREV_TERM";
         };
+
+        full_screen: full_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GLOBE &kp F>;
+            label = "FULL_SCREEN";
+        };
     };
 
     behaviors {
@@ -162,10 +143,10 @@
 
         ARROW {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                                                  &kp RA(RC(Y))  &kp RA(RC(U))  &kp RA(RC(I))  &kp RA(RC(O))  &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11              &kp LA(RETURN)      &kp RA(RETURN)  &kp LEFT       &kp DOWN       &kp UP_ARROW   &kp RIGHT      &kp RC(RA(RETURN))
-&trans  &kp F1  &kp F2  &kp F3  &kp F12              &trans              &trans          &kp RA(RC(N))  &kp RA(RC(Q))  &kp RA(RC(E))  &trans         &trans
-&trans  &trans  &trans  &trans  &mt LA(LCTRL) SPACE  &kp LEFT_SHIFT      &kp RIGHT_ALT   &trans                                                      &trans
+&kp LCTRL     &kp F7  &kp F8  &kp F9  &kp F10                                                  &kp RA(RC(Y))  &kp RA(RC(U))  &kp RA(RC(I))  &kp RA(RC(O))  &kp RCTRL
+&trans        &kp F4  &kp F5  &kp F6  &kp F11              &kp LA(RETURN)      &kp RA(RETURN)  &kp LEFT       &kp DOWN       &kp UP_ARROW   &kp RIGHT      &kp RC(RA(RETURN))
+&full_screen  &kp F1  &kp F2  &kp F3  &kp F12              &trans              &trans          &kp RA(RC(N))  &kp RA(RC(Q))  &kp RA(RC(E))  &trans         &trans
+&trans        &trans  &trans  &trans  &mt LA(LCTRL) SPACE  &kp LEFT_SHIFT      &kp RIGHT_ALT   &trans                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
