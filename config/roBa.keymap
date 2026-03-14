@@ -127,10 +127,10 @@
 
         NUM {
             bindings = <
-&kp ESC        &kp LS(LC(TAB))  &kp LG(LC(ESC))  &kp LS(LG(NUMBER_5))  &trans                                                      &kp PERIOD     &kp N7  &kp N8  &kp N9  &kp N0
-&kp LA(LG(C))  &kp LG(V)        &kp LG(C)        &kp LG(SPACE)         &trans         &kp LC(LA(KP_NUMBER_0))      &kp RA(RETURN)  &kp MINUS      &kp N4  &kp N5  &kp N6  &to_copymode
-&prev_term     &kill_pane       &create_term     &next_term            &kp LG(LS(V))  &trans                       &trans          &kp N0         &kp N1  &kp N2  &kp N3  &paste
-&trans         &trans           &trans           &kp LG(LC(LS(N4)))    &kp SPACE      &kp LS(LA(F))                &kp BACKSPACE   &kp BACKSPACE                          &kp RIGHT_COMMAND
+&kp ESC        &kp LG(LC(ESC))  &kp LS(LG(NUMBER_5))  &trans              &trans                                                      &kp PERIOD     &kp N7  &kp N8  &kp N9  &kp N0
+&kp LA(LG(C))  &kp LG(V)        &kp LG(C)             &kp LG(SPACE)       &trans         &kp LC(LA(KP_NUMBER_0))      &kp RA(RETURN)  &kp MINUS      &kp N4  &kp N5  &kp N6  &to_copymode
+&prev_term     &kill_pane       &create_term          &next_term          &kp LG(LS(V))  &trans                       &trans          &kp N0         &kp N1  &kp N2  &kp N3  &paste
+&trans         &trans           &trans                &kp LG(LC(LS(N4)))  &kp SPACE      &kp LS(LA(F))                &kp BACKSPACE   &kp BACKSPACE                          &kp RIGHT_COMMAND
             >;
         };
 
