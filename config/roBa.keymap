@@ -39,6 +39,15 @@
             key-positions = <23 24>;
         };
 
+        // 右手の ESC。I+O
+        // 通常（0）と自動マウス（4）のレイヤーだけ。ほかのキーの直後 150ms 以内は効かない（"action" の io などの誤爆よけ）
+        esc_io {
+            bindings = <&kp ESC>;
+            key-positions = <7 8>;
+            layers = <0 4>;
+            require-prior-idle-ms = <150>;
+        };
+
         // macOS の入力切り替え。K+L で英数、,+. でかな
         // 通常（0）と自動マウス（4）のレイヤーだけ。ほかのキーの直後 150ms 以内は効かない（打鍵中の誤爆よけ）
         eisu {
